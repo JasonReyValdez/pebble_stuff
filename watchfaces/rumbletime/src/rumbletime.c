@@ -5,6 +5,8 @@
    Vibrates on the hour and every N minutes.
 
    (Where N is set by VIBE_INTERVAL_IN_MINUTES.)
+   
+   test test one two three
 
  */
 
