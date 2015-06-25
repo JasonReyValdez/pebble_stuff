@@ -3,7 +3,7 @@
 static Window *main_window;
 static TextLayer *time_layer;
 static TextLayer *message_layer;
-
+static GFont munro_font;
 
 static void update_time() {
   // Get a tm structure
@@ -31,26 +31,33 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 }
 
 static void main_window_load(Window *window){
+// Background Layer
+
+
+
+// Time Layer
     time_layer = text_layer_create(GRect(0,55,144,50));
-	text_layer_set_background_color(time_layer, GColorClear);
+    text_layer_set_background_color(time_layer, GColorClear);
     text_layer_set_text_color(time_layer, GColorBlack);
-    text_layer_set_font(time_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24));
+    munro_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_MunroSmall_48));
+    text_layer_set_font(time_layer, munro_font);
     text_layer_set_text_alignment(time_layer, GTextAlignmentCenter);
 	layer_add_child(window_get_root_layer(window), text_layer_get_layer(time_layer));
-
+// Heading Layer
     message_layer = text_layer_create(GRect(0,0,144,50));
-	text_layer_set_background_color(message_layer, GColorClear);
+    text_layer_set_background_color(message_layer, GColorClear);
     text_layer_set_text_color(message_layer, GColorBlack);
     text_layer_set_text(message_layer,"Time");
-    text_layer_set_font(message_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24));
+    text_layer_set_font(message_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
     text_layer_set_text_alignment(message_layer, GTextAlignmentCenter);
-	layer_add_child(window_get_root_layer(window), text_layer_get_layer(message_layer));
+    layer_add_child(window_get_root_layer(window), text_layer_get_layer(message_layer));
     
 }
 
 static void main_window_unload(Window *window){
-	text_layer_destroy(time_layer);
+    text_layer_destroy(time_layer);
     text_layer_destroy(message_layer);
+    fonts_unload_custom_font(munro_font);
 }
 
 void init(void) {
@@ -64,7 +71,7 @@ void init(void) {
     tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
     
 	window_stack_push(main_window, true);
-    
+
     update_time();
 }
 

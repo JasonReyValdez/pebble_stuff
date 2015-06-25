@@ -7,8 +7,19 @@
     "longName": "jwatch",
     "projectType": "native",
     "resources": {
-        "media": []
-    },
+        "media": [
+        {
+        "type":"font",
+        "name":"MunroSmall_48",
+        "file":"MunroSmall.ttf"
+        }
+        {
+        "type":"png",
+        "name":"IMAGE_BACKGROUND",
+        "file":"background.png"
+        }
+     ]
+     },
     "sdkVersion": "2",
     "shortName": "jwatch",
     "uuid": "46aa5e9f-1d39-4b12-93ca-2c19defe8797",
@@ -17,4 +28,5 @@
     "watchapp": {
         "watchface": false
     }
+
 }
