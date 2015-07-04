@@ -10,13 +10,23 @@
         "media": [
         {
         "type":"font",
-        "name":"MunroSmall_48",
-        "file":"MunroSmall.ttf"
-        }
+        "name":"Puma_42",
+        "file":"puma.ttf"
+        },
+        {
+        "type":"font",
+        "name":"Elegance_24",
+        "file":"Rounded_Elegance.ttf"
+        },
+        {
+        "type":"font",
+        "name":"Elegance_30",
+        "file":"Rounded_Elegance.ttf"
+        },
         {
         "type":"png",
         "name":"IMAGE_BACKGROUND",
-        "file":"background.png"
+        "file":"backgroundFace_2.png"
         }
      ]
      },
@@ -26,7 +36,7 @@
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
-        "watchface": false
+        "watchface": true
     }
 
 }

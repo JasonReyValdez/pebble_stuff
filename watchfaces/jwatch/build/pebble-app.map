@@ -1,7 +1,7 @@
 Archive member included because of file (symbol)
 
 /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                              src/main.c.8.o (app_event_loop)
+                              src/main.c.11.o (app_event_loop)
 
 Discarded input sections
 
@@ -17,10 +17,10 @@ Discarded input sections
  .jcr           0x0000000000000000        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .tm_clone_table
                 0x0000000000000000        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
- .text          0x0000000000000000        0x0 src/main.c.8.o
- .bss           0x0000000000000000        0x0 src/main.c.8.o
- .text          0x0000000000000000        0x0 appinfo.auto.c.8.o
- .bss           0x0000000000000000        0x0 appinfo.auto.c.8.o
+ .text          0x0000000000000000        0x0 src/main.c.11.o
+ .bss           0x0000000000000000        0x0 src/main.c.11.o
+ .text          0x0000000000000000        0x0 appinfo.auto.c.11.o
+ .bss           0x0000000000000000        0x0 appinfo.auto.c.11.o
  .bss           0x0000000000000000        0x0 /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .text.accel_data_service_subscribe__deprecated
                 0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
@@ -113,17 +113,9 @@ Discarded input sections
                 0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .text.battery_state_service_unsubscribe
                 0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
- .text.bitmap_layer_create
-                0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
- .text.bitmap_layer_destroy
-                0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
- .text.bitmap_layer_get_layer
-                0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .text.bitmap_layer_set_alignment
                 0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .text.bitmap_layer_set_background_color
-                0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
- .text.bitmap_layer_set_bitmap
                 0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .text.bitmap_layer_set_compositing_mode
                 0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
@@ -195,10 +187,6 @@ Discarded input sections
  .text.gbitmap_create_as_sub_bitmap
                 0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .text.gbitmap_create_with_data
-                0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
- .text.gbitmap_create_with_resource
-                0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
- .text.gbitmap_destroy
                 0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .text.gmtime   0x0000000000000000        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .text.gpath_create
@@ -679,8 +667,8 @@ Linker script and memory map
 
 LOAD /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
 LOAD /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-LOAD src/main.c.8.o
-LOAD appinfo.auto.c.8.o
+LOAD src/main.c.11.o
+LOAD appinfo.auto.c.11.o
 LOAD /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a
 START GROUP
 LOAD /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a
@@ -691,154 +679,189 @@ LOAD /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.
 
 .header         0x0000000000000000       0x82
  *(.pbl_header)
- .pbl_header    0x0000000000000000       0x82 appinfo.auto.c.8.o
+ .pbl_header    0x0000000000000000       0x82 appinfo.auto.c.11.o
                 0x0000000000000000                __pbl_app_info
 
-.text           0x0000000000000084      0x378
+.text           0x0000000000000084      0x56c
  *(.text)
  .text          0x0000000000000084       0x14 /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  *(.text.*)
  .text.update_time
-                0x0000000000000098       0x60 src/main.c.8.o
+                0x0000000000000098       0xb4 src/main.c.11.o
  .text.tick_handler
-                0x00000000000000f8        0x4 src/main.c.8.o
+                0x000000000000014c        0x4 src/main.c.11.o
  .text.main_window_unload
-                0x00000000000000fc       0x30 src/main.c.8.o
+                0x0000000000000150       0x78 src/main.c.11.o
  .text.main_window_load
-                0x000000000000012c       0xe4 src/main.c.8.o
- .text.init     0x0000000000000210       0x60 src/main.c.8.o
-                0x0000000000000210                init
- .text.deinit   0x0000000000000270       0x10 src/main.c.8.o
-                0x0000000000000270                deinit
+                0x00000000000001c8      0x1d0 src/main.c.11.o
+ .text.init     0x0000000000000398       0x60 src/main.c.11.o
+                0x0000000000000398                init
+ .text.deinit   0x00000000000003f8       0x10 src/main.c.11.o
+                0x00000000000003f8                deinit
  .text.startup.main
-                0x0000000000000280       0x12 src/main.c.8.o
-                0x0000000000000280                main
- *fill*         0x0000000000000292        0x2 
+                0x0000000000000408       0x12 src/main.c.11.o
+                0x0000000000000408                main
+ *fill*         0x000000000000041a        0x2 
  .text.app_event_loop
-                0x0000000000000294        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000294                app_event_loop
+                0x000000000000041c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x000000000000041c                app_event_loop
+ .text.bitmap_layer_create
+                0x0000000000000428        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000428                bitmap_layer_create
+ .text.bitmap_layer_destroy
+                0x0000000000000434        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000434                bitmap_layer_destroy
+ .text.bitmap_layer_get_layer
+                0x0000000000000440        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000440                bitmap_layer_get_layer
+ .text.bitmap_layer_set_bitmap
+                0x000000000000044c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x000000000000044c                bitmap_layer_set_bitmap
  .text.clock_is_24h_style
-                0x00000000000002a0        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000002a0                clock_is_24h_style
+                0x0000000000000458        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000458                clock_is_24h_style
  .text.fonts_get_system_font
-                0x00000000000002ac        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000002ac                fonts_get_system_font
+                0x0000000000000464        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000464                fonts_get_system_font
  .text.fonts_load_custom_font
-                0x00000000000002b8        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000002b8                fonts_load_custom_font
+                0x0000000000000470        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000470                fonts_load_custom_font
  .text.fonts_unload_custom_font
-                0x00000000000002c4        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000002c4                fonts_unload_custom_font
+                0x000000000000047c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x000000000000047c                fonts_unload_custom_font
+ .text.gbitmap_create_with_resource
+                0x0000000000000488        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000488                gbitmap_create_with_resource
+ .text.gbitmap_destroy
+                0x0000000000000494        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000494                gbitmap_destroy
  .text.layer_add_child
-                0x00000000000002d0        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000002d0                layer_add_child
+                0x00000000000004a0        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x00000000000004a0                layer_add_child
  .text.localtime
-                0x00000000000002dc        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000002dc                localtime
- .text.memset   0x00000000000002e8        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000002e8                memset
+                0x00000000000004ac        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x00000000000004ac                localtime
+ .text.memset   0x00000000000004b8        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x00000000000004b8                memset
  .text.resource_get_handle
-                0x00000000000002f4        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000002f4                resource_get_handle
+                0x00000000000004c4        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x00000000000004c4                resource_get_handle
  .text.strftime
-                0x0000000000000300        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000300                strftime
+                0x00000000000004d0        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x00000000000004d0                strftime
  .text.text_layer_create
-                0x000000000000030c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x000000000000030c                text_layer_create
+                0x00000000000004dc        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x00000000000004dc                text_layer_create
  .text.text_layer_destroy
-                0x0000000000000318        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000318                text_layer_destroy
+                0x00000000000004e8        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x00000000000004e8                text_layer_destroy
  .text.text_layer_get_layer
-                0x0000000000000324        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000324                text_layer_get_layer
+                0x00000000000004f4        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x00000000000004f4                text_layer_get_layer
  .text.text_layer_set_background_color
-                0x0000000000000330        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000330                text_layer_set_background_color
+                0x0000000000000500        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000500                text_layer_set_background_color
  .text.text_layer_set_font
-                0x000000000000033c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x000000000000033c                text_layer_set_font
+                0x000000000000050c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x000000000000050c                text_layer_set_font
  .text.text_layer_set_text
-                0x0000000000000348        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000348                text_layer_set_text
+                0x0000000000000518        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000518                text_layer_set_text
  .text.text_layer_set_text_alignment
-                0x0000000000000354        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000354                text_layer_set_text_alignment
+                0x0000000000000524        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000524                text_layer_set_text_alignment
  .text.text_layer_set_text_color
-                0x0000000000000360        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000360                text_layer_set_text_color
+                0x0000000000000530        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000530                text_layer_set_text_color
  .text.tick_timer_service_subscribe
-                0x000000000000036c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x000000000000036c                tick_timer_service_subscribe
- .text.time     0x0000000000000378        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000378                time
+                0x000000000000053c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x000000000000053c                tick_timer_service_subscribe
+ .text.time     0x0000000000000548        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000548                time
  .text.window_create
-                0x0000000000000384        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000384                window_create
+                0x0000000000000554        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000554                window_create
  .text.window_destroy
-                0x0000000000000390        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x0000000000000390                window_destroy
+                0x0000000000000560        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000560                window_destroy
  .text.window_get_root_layer
-                0x000000000000039c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x000000000000039c                window_get_root_layer
+                0x000000000000056c        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x000000000000056c                window_get_root_layer
  .text.window_set_window_handlers
-                0x00000000000003a8        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000003a8                window_set_window_handlers
+                0x0000000000000578        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000578                window_set_window_handlers
  .text.window_stack_push
-                0x00000000000003b4        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
-                0x00000000000003b4                window_stack_push
+                0x0000000000000584        0xc /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+                0x0000000000000584                window_stack_push
  *(.rodata)
- .rodata        0x00000000000003c0       0x10 src/main.c.8.o
+ .rodata        0x0000000000000590       0x28 src/main.c.11.o
  *(.rodata*)
  .rodata.str1.1
-                0x00000000000003d0       0x2c src/main.c.8.o
+                0x00000000000005b8       0x38 src/main.c.11.o
 
-.glue_7         0x00000000000003fc        0x0
+.glue_7         0x00000000000005f0        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x00000000000003fc        0x0
+.glue_7t        0x00000000000005f0        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x00000000000003fc        0x0
+.vfp11_veneer   0x00000000000005f0        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x00000000000003fc        0x0
+.v4_bx          0x00000000000005f0        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x00000000000003fc        0x0
+.iplt           0x00000000000005f0        0x0
  .iplt          0x0000000000000000        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x00000000000003fc        0x0
+.rel.dyn        0x00000000000005f0        0x0
  .rel.iplt      0x0000000000000000        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x00000000000003fc        0xa
+.data           0x00000000000005f0       0x10
  *(.data)
- .data          0x00000000000003fc        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x00000000000003fc        0x4 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x00000000000003fc                __dso_handle
- .data          0x0000000000000400        0x0 src/main.c.8.o
- .data          0x0000000000000400        0x0 appinfo.auto.c.8.o
- .data          0x0000000000000400        0x0 /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
- .data          0x0000000000000400        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x0000000000000400        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x00000000000005f0        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x00000000000005f0        0x4 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x00000000000005f0                __dso_handle
+ .data          0x00000000000005f4        0x0 src/main.c.11.o
+ .data          0x00000000000005f4        0x0 appinfo.auto.c.11.o
+ .data          0x00000000000005f4        0x0 /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
+ .data          0x00000000000005f4        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x00000000000005f4        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
- .data.buffer.6658
-                0x0000000000000400        0x6 src/main.c.8.o
+ .data.date_buffer.6669
+                0x00000000000005f4        0x3 src/main.c.11.o
+ .data.month_buffer.6670
+                0x00000000000005f7        0x3 src/main.c.11.o
+ .data.buffer.6668
+                0x00000000000005fa        0x6 src/main.c.11.o
 
-.igot.plt       0x0000000000000408        0x0
+.igot.plt       0x0000000000000600        0x0
  .igot.plt      0x0000000000000000        0x0 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.bss            0x0000000000000408       0x10
+.bss            0x0000000000000600       0x2c
  *(.bss)
  *(.bss.*)
- .bss.munro_font
-                0x0000000000000408        0x4 src/main.c.8.o
  .bss.message_layer
-                0x000000000000040c        0x4 src/main.c.8.o
+                0x0000000000000600        0x4 src/main.c.11.o
+ .bss.date_layer
+                0x0000000000000604        0x4 src/main.c.11.o
+ .bss.day_font  0x0000000000000608        0x4 src/main.c.11.o
+ .bss.weather_layer
+                0x000000000000060c        0x4 src/main.c.11.o
+ .bss.month_layer
+                0x0000000000000610        0x4 src/main.c.11.o
+ .bss.background_layer
+                0x0000000000000614        0x4 src/main.c.11.o
+ .bss.month_font
+                0x0000000000000618        0x4 src/main.c.11.o
  .bss.time_layer
-                0x0000000000000410        0x4 src/main.c.8.o
+                0x000000000000061c        0x4 src/main.c.11.o
  .bss.main_window
-                0x0000000000000414        0x4 src/main.c.8.o
+                0x0000000000000620        0x4 src/main.c.11.o
+ .bss.time_font
+                0x0000000000000624        0x4 src/main.c.11.o
+ .bss.background_bitmap
+                0x0000000000000628        0x4 src/main.c.11.o
 
 DISCARD
  libc.a(*)
@@ -854,9 +877,9 @@ OUTPUT(/home/jayrey/dev/pebble_stuff/watchfaces/jwatch/build/pebble-app.elf elf3
  .ARM.attributes
                 0x0000000000000019       0x29 /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .ARM.attributes
-                0x0000000000000042       0x33 src/main.c.8.o
+                0x0000000000000042       0x33 src/main.c.11.o
  .ARM.attributes
-                0x0000000000000075       0x33 appinfo.auto.c.8.o
+                0x0000000000000075       0x33 appinfo.auto.c.11.o
  .ARM.attributes
                 0x00000000000000a8       0x21 /home/jayrey/dev/PebbleSDK-2.9/Pebble/lib/libpebble.a(tmpycZPtxpebble.o)
  .ARM.attributes
@@ -867,39 +890,39 @@ OUTPUT(/home/jayrey/dev/pebble_stuff/watchfaces/jwatch/build/pebble-app.elf elf3
 .comment        0x0000000000000000       0x4e
  .comment       0x0000000000000000       0x4e /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
                                          0x4f (size before relaxing)
- .comment       0x0000000000000000       0x4f src/main.c.8.o
- .comment       0x0000000000000000       0x4f appinfo.auto.c.8.o
+ .comment       0x0000000000000000       0x4f src/main.c.11.o
+ .comment       0x0000000000000000       0x4f appinfo.auto.c.11.o
  .comment       0x0000000000000000       0x4f /home/jayrey/dev/PebbleSDK-2.9/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000      0xcf6
- .debug_info    0x0000000000000000      0x9ee src/main.c.8.o
- .debug_info    0x00000000000009ee      0x308 appinfo.auto.c.8.o
+.debug_info     0x0000000000000000     0x1140
+ .debug_info    0x0000000000000000      0xdf9 src/main.c.11.o
+ .debug_info    0x0000000000000df9      0x347 appinfo.auto.c.11.o
 
-.debug_abbrev   0x0000000000000000      0x31a
- .debug_abbrev  0x0000000000000000      0x27c src/main.c.8.o
- .debug_abbrev  0x000000000000027c       0x9e appinfo.auto.c.8.o
+.debug_abbrev   0x0000000000000000      0x366
+ .debug_abbrev  0x0000000000000000      0x2c8 src/main.c.11.o
+ .debug_abbrev  0x00000000000002c8       0x9e appinfo.auto.c.11.o
 
-.debug_loc      0x0000000000000000      0x157
- .debug_loc     0x0000000000000000      0x157 src/main.c.8.o
+.debug_loc      0x0000000000000000      0x158
+ .debug_loc     0x0000000000000000      0x158 src/main.c.11.o
 
 .debug_aranges  0x0000000000000000       0x68
  .debug_aranges
-                0x0000000000000000       0x50 src/main.c.8.o
+                0x0000000000000000       0x50 src/main.c.11.o
  .debug_aranges
-                0x0000000000000050       0x18 appinfo.auto.c.8.o
+                0x0000000000000050       0x18 appinfo.auto.c.11.o
 
 .debug_ranges   0x0000000000000000       0x40
- .debug_ranges  0x0000000000000000       0x40 src/main.c.8.o
+ .debug_ranges  0x0000000000000000       0x40 src/main.c.11.o
 
-.debug_line     0x0000000000000000      0x3d0
- .debug_line    0x0000000000000000      0x2c2 src/main.c.8.o
- .debug_line    0x00000000000002c2      0x10e appinfo.auto.c.8.o
+.debug_line     0x0000000000000000      0x3f4
+ .debug_line    0x0000000000000000      0x2e6 src/main.c.11.o
+ .debug_line    0x00000000000002e6      0x10e appinfo.auto.c.11.o
 
-.debug_str      0x0000000000000000      0x67a
- .debug_str     0x0000000000000000      0x505 src/main.c.8.o
-                                        0x575 (size before relaxing)
- .debug_str     0x0000000000000505      0x175 appinfo.auto.c.8.o
-                                        0x295 (size before relaxing)
+.debug_str      0x0000000000000000      0x8ab
+ .debug_str     0x0000000000000000      0x69f src/main.c.11.o
+                                        0x723 (size before relaxing)
+ .debug_str     0x000000000000069f      0x20c appinfo.auto.c.11.o
+                                        0x38a (size before relaxing)
 
-.debug_frame    0x0000000000000000       0xbc
- .debug_frame   0x0000000000000000       0xbc src/main.c.8.o
+.debug_frame    0x0000000000000000       0xc0
+ .debug_frame   0x0000000000000000       0xc0 src/main.c.11.o

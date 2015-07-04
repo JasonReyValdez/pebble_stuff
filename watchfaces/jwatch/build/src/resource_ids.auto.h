@@ -11,6 +11,9 @@
 typedef enum {
   INVALID_RESOURCE = 0,
   DEFAULT_MENU_ICON = 0, // Friendly synonym for use in `PBL_APP_INFO()` calls
-  RESOURCE_ID_MunroSmall_48,
+  RESOURCE_ID_Puma_42,
+  RESOURCE_ID_Elegance_24,
+  RESOURCE_ID_Elegance_30,
+  RESOURCE_ID_IMAGE_BACKGROUND,
 
 } ResourceId;
