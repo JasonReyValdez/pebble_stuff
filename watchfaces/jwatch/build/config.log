@@ -1,6 +1,6 @@
-# project  configured on Thu Jul  2 21:42:58 2015 by
+# project  configured on Fri Jul 10 18:39:50 2015 by
 # waf 1.7.11 (abi 98, python 20706f0 on linux2)
-# using /home/jayrey/dev/PebbleSDK-2.9/Pebble/waf configure build
+# using /home/jayrey/dev/PebbleSDK-3.1/Pebble/waf configure build
 #
 ----------------------------------------
 Setting top to
@@ -8,6 +8,20 @@ Setting top to
 ----------------------------------------
 Setting out to
 /home/jayrey/dev/pebble_stuff/watchfaces/jwatch/build
+----------------------------------------
+Found Pebble SDK for basalt in:
+/home/jayrey/dev/PebbleSDK-3.1/Pebble/basalt
+----------------------------------------
+Checking for program gcc,cc
+arm-none-eabi-gcc
+find program=['gcc', 'cc'] paths='' var='CC' -> 'arm-none-eabi-gcc'
+----------------------------------------
+Checking for program ar
+arm-none-eabi-ar
+find program=['ar'] paths='' var='AR' -> 'arm-none-eabi-ar'
+----------------------------------------
+Found Pebble SDK for aplite in:
+/home/jayrey/dev/PebbleSDK-3.1/Pebble/aplite
 ----------------------------------------
 Checking for program gcc,cc
 arm-none-eabi-gcc

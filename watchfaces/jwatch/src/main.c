@@ -1,4 +1,6 @@
 #include <pebble.h>
+#define KEY_TEMPERATURE 0
+#define KEY_CONDITIONS 1
 
 static Window *main_window;
 static TextLayer *time_layer;
@@ -52,18 +54,18 @@ static void main_window_load(Window *window){
     layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(background_layer));
     
 // Month Layer
-    month_layer = text_layer_create(GRect(32,42,40,40));
-    month_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_Elegance_24));
+    month_layer = text_layer_create(GRect(35,45,30,30));
+    month_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_Elegance_18));
     text_layer_set_font(month_layer,month_font);
     text_layer_set_text_color(month_layer, GColorWhite);
     text_layer_set_background_color(month_layer, GColorClear);
     layer_add_child(window_get_root_layer(window), text_layer_get_layer(month_layer));
 
 // Date Layer
-    date_layer = text_layer_create(GRect(81,37,55,55));
+    date_layer = text_layer_create(GRect(88,45,30,30));
     text_layer_set_background_color(date_layer, GColorClear);
     text_layer_set_text_color(date_layer, GColorWhite);
-    day_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_Elegance_30));
+    day_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_Elegance_18));
     text_layer_set_font(date_layer, day_font);
     layer_add_child(window_get_root_layer(window), text_layer_get_layer(date_layer));
 // Weather Layer
@@ -71,9 +73,9 @@ static void main_window_load(Window *window){
     text_layer_set_background_color(weather_layer,GColorClear);
     text_layer_set_text_color(weather_layer, GColorWhite);
     text_layer_set_text_alignment(weather_layer, GTextAlignmentLeft);
-    text_layer_set_font(weather_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
+    text_layer_set_font(weather_layer, fonts_get_system_font(FONT_KEY_GOTHIC_14));
     text_layer_set_text(weather_layer,"Loading...");
-
+    layer_add_child(window_get_root_layer(window), text_layer_get_layer(weather_layer));
 // Time Layer
     time_layer = text_layer_create(GRect(12,80,120,75));
     text_layer_set_background_color(time_layer, GColorClear);
@@ -97,6 +99,21 @@ static void main_window_unload(Window *window){
     fonts_unload_custom_font(time_font);
 }
 
+static void inbox_received_callback(DictionaryIteratory *iterator, void *context){
+}
+
+static void inbox_dropped_callback(AppMessageResult reason, void *context){
+    APP_LOG(APP_LOG_LEVEL_ERROR, "Message dropped!");
+}
+
+static void outbox_failed_callback(DictionaryIterator *iterator, AppMessageResult reason, void *context){
+    APP_LOG(APP_LOG_LEVEL_ERROR, "Outbox send failed!");
+}
+
+static void outbox_sent_callback(DictionaryIterator *iterator, void *context) {
+    APP_LOG(APP_LOG_LEVEL_INFO, "Outbox send success!");
+}
+
 void init(void) {
 	main_window = window_create();
 	window_set_window_handlers(main_window,(WindowHandlers){
@@ -110,6 +127,13 @@ void init(void) {
 	window_stack_push(main_window, true);
 
     update_time();
+
+    app_message_register_inbox_received(inbox_received_callback);
+    app_message_register_inbox_dropped(inbox_dropped_callback);
+    app_message_register_outbox_failed(outbox_failed_callback);
+    app_message_register_outbox_sent(outbox_sent_callback);
+
+    app_message_open(app_message_inbox_size_maximum(), app_message_outbox_size_maximum());
 }
 
 void deinit(void) {
