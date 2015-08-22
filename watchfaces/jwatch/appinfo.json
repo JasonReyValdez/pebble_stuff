@@ -1,32 +1,45 @@
 {
-    "appKeys": {},
-    "capabilities": [
-        ""
-    ],
-    "companyName": "jason.vldz@gmail.com",
-    "longName": "jwatch",
-    "projectType": "native",
-    "resources": {
-        "media": [
-        {
-        "type":"font",
-        "name":"MunroSmall_48",
-        "file":"MunroSmall.ttf"
-        }
-        {
-        "type":"png",
-        "name":"IMAGE_BACKGROUND",
-        "file":"background.png"
-        }
-     ]
-     },
-    "sdkVersion": "2",
-    "shortName": "jwatch",
-    "uuid": "46aa5e9f-1d39-4b12-93ca-2c19defe8797",
-    "versionCode": 1,
-    "versionLabel": "1.0",
-    "watchapp": {
-        "watchface": false
-    }
-
+  "appKeys": {},
+  "capabilities": [
+    ""
+  ],
+  "companyName": "jason.vldz@gmail.com",
+  "longName": "jwatch",
+  "projectType": "native",
+  "resources": {
+    "media": [
+      {
+        "type": "font",
+        "name": "Puma_42",
+        "file": "puma.ttf"
+      },
+      {
+        "type": "font",
+        "name": "Elegance_18",
+        "file": "Rounded_Elegance.ttf"
+      },
+      {
+        "type": "font",
+        "name": "Elegance_30",
+        "file": "Rounded_Elegance.ttf"
+      },
+      {
+        "type": "png",
+        "name": "IMAGE_BACKGROUND",
+        "file": "backgroundFace_2.png"
+      }
+    ]
+  },
+  "sdkVersion": "3",
+  "shortName": "jwatch",
+  "uuid": "46aa5e9f-1d39-4b12-93ca-2c19defe8797",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ]
 }
